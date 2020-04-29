@@ -63,11 +63,11 @@ export class KartPlayer extends HTMLElement {
 
   inc() {
     if (this.object() == 1) {
-      this.x += this.setSpeed();
+      this.x += this.powerUp();
       this.active = 1;
-      if (this.setSpeed() == 70) {
+      if (this.powerUp() == 70) {
         this.power_selected = this.power[0];
-      } else if (this.setSpeed() == 40) {
+      } else if (this.powerUp() == 40) {
         this.power_selected = this.power[2];
       } else {
         this.power_selected = this.power[1];
