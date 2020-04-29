@@ -1,0 +1,7 @@
+.element-noshadow {
+  border: 4px solid black;
+}
+
+.element-shadow {
+  border: 4px solid blue;
+}

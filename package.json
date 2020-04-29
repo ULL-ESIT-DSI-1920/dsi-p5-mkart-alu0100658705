@@ -1,0 +1,46 @@
+{
+  "name": "prct05",
+  "version": "1.0.0",
+  "description": "Mkart",
+  "main": "index.js",
+  "dependencies": {
+    "parcel-bundler": "^1.12.4"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.6",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "gh-pages": "^2.2.0",
+    "postcss-clean": "^1.1.0",
+    "postcss-font-magician": "^2.3.1",
+    "postcss-mixins": "^6.2.3",
+    "postcss-nested": "^4.2.1",
+    "postcss-ref": "^2.0.0",
+    "prettier": "^2.0.5",
+    "stylelint": "^13.3.3",
+    "stylelint-config-standard": "^20.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf dist package-lock.json node_modules",
+    "start": "npx parcel ./src/index.html --port 8080",
+    "build": "parcel build ./src/index.html --public-url /dsi-p5-mkart-alu0100658705/ -d build",
+    "deploy": "gh-pages -d build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ULL-ESIT-DSI-1920/dsi-p5-mkart-alu0100658705.git"
+  },
+  "author": "Pablo Beth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ULL-ESIT-DSI-1920/dsi-p5-mkart-alu0100658705/issues"
+  },
+  "homepage": "https://github.com/ULL-ESIT-DSI-1920/dsi-p5-mkart-alu0100658705#readme"
+}
