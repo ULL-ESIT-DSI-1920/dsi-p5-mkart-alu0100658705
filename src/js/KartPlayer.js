@@ -12,7 +12,7 @@ export class KartPlayer extends HTMLElement {
     this.opacidad = 1;
     this.b = -1;
     this.power = this.create_power();
-    this.power_selected = this.power[0];
+    this.power_selected = "";
     this.active = 0;
   }
 
@@ -51,7 +51,6 @@ export class KartPlayer extends HTMLElement {
   render() {
     this.shadowRoot.innerHTML = `
         <style>${this.styles}</style>
-        <item-kart></item-kart>
         <img id="powerup" src="${this.power_selected}" width=64 heigt=64>
         <img id="avatar" src="${this.image}" alt="${this.name}" width=128 height=128>
       `;
@@ -65,9 +64,9 @@ export class KartPlayer extends HTMLElement {
     if (this.object() == 1) {
       this.x += this.powerUp();
       this.active = 1;
-      if (this.powerUp() == 70) {
+      if (this.powerUp() == 100) {
         this.power_selected = this.power[0];
-      } else if (this.powerUp() == 40) {
+      } else if (this.powerUp() == 50) {
         this.power_selected = this.power[2];
       } else {
         this.power_selected = this.power[1];
@@ -80,7 +79,7 @@ export class KartPlayer extends HTMLElement {
   }
 
   powerUp() {
-    var velocidad = [70, 40, 0];
+    var velocidad = [100, 50, 0];
     return velocidad[Math.floor(Math.random() * velocidad.length)];
   }
 
